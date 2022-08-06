@@ -1,0 +1,125 @@
+.statistics{
+    padding: 70px 0;
+}
+
+.statistics__box{
+    margin: 80px auto;
+    max-width: 540px;
+    text-align: center;
+}
+
+.statistics__title{
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 48px;
+    letter-spacing: -0.7px;
+    color: $black;
+}
+
+.statistics__desc{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.109091px;
+    color: $main-grey;
+}
+
+.statistics__list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+    &::before{
+        position: absolute;
+        width: 8px;
+        height: 930px;
+        background-color: #2BD0D0;
+        content: "";
+    }
+}
+
+
+.statistics__item{
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    
+    &:not(:last-child){
+        margin-bottom: 90px;
+    }
+    
+    &::before{
+        position: absolute;
+        top: -57px;
+        left: 0;
+        right: 0;
+        width: 88px;
+        height: 88px;
+        margin: 0 auto;
+        background-image: url("../images/statistic.svg");
+        content: "";
+    }
+    
+    &:nth-child(2)::before{
+        background-image: url("../images/record.svg");
+    }
+    
+    &:nth-child(3)::before{
+        background-image: url("../images/paint.svg");
+    }
+}
+
+.statistics__heading{
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+    color: $black;
+}
+
+.statistics__text{
+    font-size: 15px;
+    line-height: 26px;
+    color: $main-grey;
+}
+
+@media only screen and (min-width:1024px) {
+    .statistics__list{
+        flex-direction: row;
+
+        &::before{
+            
+            left: 43%;
+            transform: rotate(90deg);
+        }
+    }
+
+    .statistics__item{
+        text-align: left;
+        &:not(:last-child){
+            margin-right: 30px;
+            margin-bottom: 0;
+        }
+
+        &:nth-child(2){
+            margin-top: 50px;
+        }
+
+        &:nth-child(3){
+            margin-top: 100px;
+        }
+
+
+    }
+}
+
+
+

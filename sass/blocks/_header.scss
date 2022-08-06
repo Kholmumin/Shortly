@@ -1,0 +1,181 @@
+
+.site-header{
+    background-color: #fff;
+    position: relative;
+    padding: 40px 0;
+}
+
+.site-all{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header__wrapper{
+    display: none;
+    justify-content: space-between;
+}
+
+.logo{
+    display: none;
+    margin-right: 45px;
+}
+
+.site-header__left{
+    display: flex;
+    align-items: center;
+}
+
+.nav__list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__item:not(:last-child){
+    margin-right: 32px;
+}
+
+.nav__link{
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    color: $main-grey;
+    transition: color 0.3s ease;
+    
+    &:hover{
+        color: $black;
+    }
+}
+
+.login,
+.sign{
+    display: inline-block;
+}
+
+.login{
+    margin-right: 37px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    color: $main-grey;
+}
+
+.sign{
+    padding: 9px 24px;
+    background: $blue-green;
+    border-radius: 28px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    color: #FFFFFF;
+    transition: color 0.3s ease-in-out;
+    
+    &:hover{
+        opacity: 0.6;
+    }
+}
+
+.open{
+    border: none;
+    background-color: transparent;
+    
+    &::before{
+        display: block;
+        width: 24px;
+        height: 21px;
+        background-image: url("../images/hamburg.png");
+        content: "";
+    }
+}
+
+
+.open-hamburg .site-header__wrapper{
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 24px 40px 24px;
+    justify-content: center;
+    background-color: #3A3054;
+    border-radius: 10px;
+    animation: menu 1s ease;
+}
+
+@keyframes menu{
+    0%{
+        transform: translateY(-1000px);
+    }
+    
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.open-hamburg .site-header__left{
+    justify-content: center;
+}
+
+.open-hamburg .nav__list{
+    flex-direction: column;
+    justify-content: center;
+    
+} 
+
+.open-hamburg .login{
+    display: block;
+    margin: 0;
+    margin-bottom: 24px;
+    padding-top: 32px;
+    color: #fff;
+    border-top: 1px solid #9E9AA8;
+    text-align: center;
+}
+
+.open-hamburg .nav__item:not(:last-child) {
+    margin-right: 0px;
+    text-align: center;
+}
+
+.open-hamburg .nav__item {
+    margin-bottom: 40px;
+}
+
+.open-hamburg .nav__link{
+    color: #fff;
+}
+
+.open-hamburg .site-header__right{
+    text-align: center;
+}
+
+.open-hamburg .sign{
+    padding: 12px 88px;
+}
+
+@media only screen and (min-width:700px) {
+    
+    .logo-mobile{
+        display: none;
+    }
+    
+    .site-all{
+        display: block;
+    }
+    
+    .site-header__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .logo{
+        display: block;
+    }
+    
+    .open{
+        display: none;
+    }
+        
+}

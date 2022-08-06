@@ -1,0 +1,243 @@
+
+.hero{
+    background-color: #fff;
+    padding-top: 355px;
+    padding-bottom: 180px;
+    background-image: url("../images/hero-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 460px 337px;
+    
+}
+
+.hero-all{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero__images{
+    margin-bottom: 37px;
+}
+
+.hero__box{
+    max-width: 327px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero__title{
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 41px;
+    line-height: 48px;
+    letter-spacing: -1.05px;
+    color: $black;
+}
+
+.hero__text{
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.122727px;
+    color: $main-grey;
+}
+
+.blue{
+    padding: 14px 40px;
+    font-size: 20px;
+}
+
+
+.hero__form{
+    
+    position: absolute;
+    width: 100%;
+    bottom: -80%;
+    border-radius: 21px;
+    padding: 24px;
+    background-image: url("../images/mobile_input.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.hero__label,.hero-input{
+    display: block;
+    width: 100%;
+}
+
+.hero-input{
+    position: relative;
+    margin-bottom: 30px;
+    padding: 10px ;
+    background: #FFFFFF;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease-in;
+}
+
+.hero-input::placeholder{
+    font-family: "Poppins";
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: 0.12px;
+    color: $black;
+    opacity: 0.5;
+}
+
+
+.hero__invalid{
+    position: absolute;
+    display: none;
+    top: 68px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.0818182px;
+    color: #F46363;
+    transition: all 0.3s ease-in;
+}
+
+input:not(:placeholder-shown):not(:focus):invalid{
+    border-color: #F46363;
+    transition: all 0.3s ease-in;
+}
+input:not(:placeholder-shown):not(:focus):invalid ~ .hero__invalid{ 
+    display: block;
+    transition: all 0.3s ease-in;
+}
+
+.hero__short{
+    width: 100%;
+    display: block;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+
+@media only screen and (min-width:425px){
+    .hero{
+        background-position: calc(50%) calc(50% - 245px);
+    }
+}
+
+@media only screen and (min-width:700px) {
+    .hero{
+        padding: 0{
+            bottom: 150px
+        };
+        background-position: calc(50% + 262px) calc(50% - 30px);
+    }
+    
+    .hero__box{
+        max-width: 390px;
+        margin: 0;
+        text-align: left;
+    }
+
+    .hero__form{
+        background-image: url("../images/back-form.svg");
+        bottom: -70%;
+    }
+
+    .hero__inputs{
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .hero__invalid{
+        top: 60%;
+    }
+
+    .hero__label{
+        margin-right: 24px;
+        width: 70%;
+    }
+    .hero-input{
+        padding: 14px;
+    }
+
+    .hero__short{
+        padding: 14px 24px;
+        width: 30%;
+    }
+    
+    
+}
+
+
+
+
+@media only screen and (min-width:900px) { 
+    .hero{
+        padding: 30px 0;
+        padding-bottom: 200px;
+        background-position: calc(50%  + 335px) calc(50% - 30px);
+        background-size: 620px 450px;
+    }
+
+    // .hero__form{
+    //     bottom: -50%;
+    // }
+    
+    .hero__box{
+        max-width: 501px;
+        margin: 0;
+        text-align: left;
+    }
+    
+    .hero__title{
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 70px;
+        letter-spacing: -2px;
+        color: $black;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .hero{
+        background-size: 600px 582px;
+    }
+    .hero__title{
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 90px;
+        letter-spacing: -2px;
+        color: $black;
+    }
+
+    .hero__form{
+        padding: 40px 20px;
+    }
+}
+
+@media screen and (min-width:1300px) {
+    .hero{
+        padding: 150px 0;
+        background-size: 733px 482px;
+        background-position: calc(50% + 386px) calc(50% - 44px);
+    }
+
+    .hero__form{
+        bottom: -60%;
+    }
+}
+
+@media screen and (min-width:1400px) {
+    .hero{
+        padding: 95px 0;
+        padding-bottom: 205px;
+        background-size: 733px 482px;
+        background-position: calc(50% + 590px) calc(50% - 44px);
+    }
+
+    .hero__form{
+        bottom: -70%;
+    }
+}

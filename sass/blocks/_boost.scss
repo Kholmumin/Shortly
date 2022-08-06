@@ -1,0 +1,28 @@
+
+.boost{
+    padding: 90px 0;
+    background-image: url("../images/boost.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.boost__box{
+    text-align: center;
+}
+
+.boost-title{
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 48px;
+    letter-spacing: -0.7px;
+    color: #FFFFFF;
+}
+
+@media only screen and (min-width:900px) {
+    .boost-title{
+        margin-bottom: 32px;
+        font-size: 40px;
+    }
+}
